@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD de Clientes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: url('/api_backend_dev/API-REST/API.REST.PHP/api-rest/imagendefondo.jpg') no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            width: 400px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+        h2 {
+            color: #333;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        input {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .btn {
+            padding: 10px;
+            font-size: 16px;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .btn-primary {
+            background-color: #28a745;
+        }
+        .btn-primary:hover {
+            background-color: #218838;
+        }
+        .toggle-button {
+            background-color: #007bff;
+            margin-top: 10px;
+        }
+        .toggle-button:hover {
+            background-color: #0056b3;
+        }
+        .client-list {
+            margin-top: 20px;
+            display: none;
+            text-align: left;
+        }
+        .client-item {
+            background: #f8f9fa;
+            padding: 10px;
+            margin: 5px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 5px;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .client-buttons {
+            display: flex;
+            gap: 5px;
+        }
+        .btn-delete {
+            background-color: #dc3545;
+        }
+        .btn-delete:hover {
+            background-color: #c82333;
+        }
+        .btn-edit {
+            background-color: #007bff;
+        }
+        .btn-edit:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>CRUD de Clientes "Elaborado Por Alejandro De Mendoza"</h2>
+        
+        <form id="clientForm">
+            <input type="hidden" id="clientId">
+            <input type="email" id="email" placeholder="Correo electrónico" required>
+            <input type="text" id="name" placeholder="Nombre" required>
+            <input type="text" id="city" placeholder="Ciudad" required>
+            <input type="text" id="telephone" placeholder="Teléfono" required>
+            <button type="submit" class="btn btn-primary">Guardar Cliente</button>
+        </form>
+
+        <button id="showClientsBtn" class="btn toggle-button">Mostrar Clientes</button>
+        <div class="client-list" id="clientList"></div>
+    </div>
+
+    <script>
+        const apiUrl = "http://localhost/api_backend_dev/API-REST/API.REST.PHP/api-rest/";
+        const clientList = document.getElementById("clientList");
+        const showClientsBtn = document.getElementById("showClientsBtn");
+
+        function fetchClients() {
+            fetch(apiUrl + "get_all_client.php")
+                .then(response => response.json())
+                .then(data => {
+                    clientList.innerHTML = "";
+                    data.forEach(client => {
+                        const div = document.createElement("div");
+                        div.classList.add("client-item");
+                        div.innerHTML = `
+                            <div class="client-info">
+                                ${client.name} - ${client.email} (${client.city})
+                            </div>
+                            <div class="client-buttons">
+                                <button class="btn btn-delete" onclick="deleteClient(${client.id})">Eliminar</button>
+                                <button class="btn btn-edit" onclick="editClient(${client.id}, '${client.email}', '${client.name}', '${client.city}', '${client.telephone}')">Editar</button>
+                            </div>
+                        `;
+                        clientList.appendChild(div);
+                    });
+                });
+        }
+
+        showClientsBtn.addEventListener("click", function () {
+            if (clientList.style.display === "none" || clientList.style.display === "") {
+                clientList.style.display = "block";
+                fetchClients();
+                showClientsBtn.textContent = "Ocultar Clientes";
+            } else {
+                clientList.style.display = "none";
+                showClientsBtn.textContent = "Mostrar Clientes";
+            }
+        });
+
+        document.getElementById("clientForm").addEventListener("submit", function (e) {
+            e.preventDefault();
+            const id = document.getElementById("clientId").value;
+            const email = document.getElementById("email").value;
+            const name = document.getElementById("name").value;
+            const city = document.getElementById("city").value;
+            const telephone = document.getElementById("telephone").value;
+
+            const method = id ? "PUT" : "POST";
+            const url = id ? `${apiUrl}update_client.php?id=${id}` : `${apiUrl}create_client.php`;
+
+            const formData = new URLSearchParams();
+            formData.append("email", email);
+            formData.append("name", name);
+            formData.append("city", city);
+            formData.append("telephone", telephone);
+
+            fetch(url, {
+                method: method,
+                headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                body: formData.toString()
+            })
+            .then(response => response.json())
+            .then(data => {
+                alert(data.message);
+                document.getElementById("clientForm").reset();
+                document.getElementById("clientId").value = "";
+                fetchClients();
+            })
+            .catch(error => console.error("Error:", error));
+        });
+
+        function deleteClient(id) {
+            fetch(`${apiUrl}delete_client.php?id=${id}`, { method: "DELETE" })
+            .then(response => response.json())
+            .then(() => fetchClients());
+        }
+
+        function editClient(id, email, name, city, telephone) {
+            document.getElementById("clientId").value = id;
+            document.getElementById("email").value = email;
+            document.getElementById("name").value = name;
+            document.getElementById("city").value = city;
+            document.getElementById("telephone").value = telephone;
+        }
+    </script>
+</body>
+</html>

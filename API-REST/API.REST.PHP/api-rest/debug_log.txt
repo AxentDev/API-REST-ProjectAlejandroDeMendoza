@@ -1,0 +1,49 @@
+{"debug_received_data":{"id":"7","email":"nuevo@email.com","name":"Julian Barrios","city":"Bogot\u00e1","telephone":"3001234567"}}
+{"debug_received_data":{"id":"8","email":"nuevo@email.com","name":"Julian Barrios","city":"Bogot\u00e1","telephone":"3001234567"}}
+Resultado de update_client: null
+{"debug_received_data":{"id":"9","email":"nuevo@email.com","name":"Julian Barrios","city":"Bogot\u00e1","telephone":"3001234567"}}
+Resultado de update_client: null
+{"debug_received_data":{"id":"9","email":"nuevo@email.com","name":"Julian Barrios","city":"Bogot\u00e1","telephone":"3001234567"}}
+Resultado de update_client: null
+{"debug_received_data":{"id":"9","email":"nuevo@email.com","name":"Julian Barrios","city":"Bogot\u00e1","telephone":"3001234567"}}
+Resultado de update_client: null
+{"debug_received_data":{"id":"9","email":"nuevo@email.com","name":"Julian Barrios","city":"Bogot\u00e1","telephone":"3001234567"}}
+Resultado de update_client: null
+{"debug_received_data":{"id":"7","email":"nuevo@email.com","name":"Julian Barrios","city":"Bogot\u00e1","telephone":"3001234567"}}
+Resultado de update_client: null
+{"debug_received_data":{"id":"7","email":"nuevo@email.com","name":"Julian Barrios","city":"Bogot\u00e1","telephone":"3001234567"}}
+Resultado de update_client: null
+{"debug_received_data":{"id":"9","email":"nuevo@email.com","name":"Julian Barrios","city":"Bogot\u00e1","telephone":"3001234567"}}
+Resultado de update_client: null
+{"debug_received_data":{"id":"11","email":"nuevo@email.com","name":"Julian Barrios","city":"Bogot\u00e1","telephone":"3001234567"}}
+Resultado de update_client: null
+{"debug_received_data":{"id":"11","email":"nuevo@email.com","name":"andres Barrios","city":"Bogot\u00e1","telephone":"3001234567"}}
+Ejecutando consulta UPDATE para ID: 11
+✅ Cliente con ID 11 actualizado correctamente.
+Resultado de update_client: null
+{"debug_received_data":null}
+{"debug_received_data":{"id":"15","email":"nuevo@email.com","name":"Andras Camilo Barrios","city":"Bogot\u00e1","telephone":"3001234567"}}
+Ejecutando consulta UPDATE para ID: 15
+✅ Cliente con ID 15 actualizado correctamente.
+Resultado de update_client: null
+{"debug_received_data":{"id":"15","email":"nuevo@email.com","name":"Andras Camilo Barrios","city":"Bogot\u00e1","telephone":"3001234567"}}
+Resultado de update_client: null
+{"debug_received_data":{"id":"11","email":"nuevo@email.com","name":"Julian Barrios","city":"Bogot\u00e1","telephone":"3001234567"}}
+Resultado de update_client: null
+{"debug_received_data":{"id":"13","email":"nuevo@email.com","name":"Julian Barrios","city":"Bogot\u00e1","telephone":"3001234567"}}
+{"debug_received_data":null}
+{"debug_received_data":{"id":"13","email":"nuevo@email.com","name":"Alejandro Barrios","city":"Bogot\u00e1","telephone":"3001234567"}}
+{"debug_received_data":null}
+{"debug_received_data":null}
+{"debug_received_data":{"id":"10","email":"nuevo@email.com","name":"Alejandro Galindo","city":"Bogot\u00e1","telephone":"3001234567"}}
+{"debug_received_data":{"id":"10","email":"nuevo@email.com","name":"Julio Galindo","city":"Bogot\u00e1","telephone":"3001234567"}}
+{"debug_received_data":{"id":"13","email":"nuevo@email.com","name":"David Barrios","city":"Bogot\u00e1","telephone":"3001234567"}}
+{"debug_received_data":{"id":"13","email":"nuevo@email.com","name":"Alejandro Barrios","city":"Bogot\u00e1","telephone":"3001234567"}}
+{"debug_received_data":null}
+{"debug_received_data":null}
+{"debug_received_data":null}
+{"debug_received_data":null}
+{"debug_received_data":null}
+{"debug_received_data":null}
+{"debug_received_data":null}
+{"debug_received_data":null}
