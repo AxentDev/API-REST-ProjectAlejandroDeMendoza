@@ -51,7 +51,7 @@ C:\xampp\htdocs\api_backend_dev\API-REST\API.REST.PHP\api-rest
 ![Imagen Web 1](https://github.com/AxentDev/API-REST-ProjectAlejandroDeMendoza/blob/master/API-REST/API.REST.PHP/api-rest/ImagenWeb1.png)
 ![Imagen Web 2](https://github.com/AxentDev/API-REST-ProjectAlejandroDeMendoza/blob/master/API-REST/API.REST.PHP/api-rest/ImagenWeb2.png)
 
-Uso
+## Uso
 
 Interfaz web
 
@@ -60,11 +60,11 @@ Interfaz web
 3. Puedes ver todos los clientes haciendo clic en el botón "Mostrar Clientes".
 4. Los clientes pueden ser eliminados o editados directamente desde la lista.
 
-API REST
+## API REST
 
 - POST /create_client.php: Crea un nuevo cliente.
 - GET /get_all_client.php: Obtiene todos los clientes.
 - PUT /update_client.php?id={id}: Actualiza un cliente existente.
 - DELETE /delete_client.php?id={id}: Elimina un cliente.
 
-Contribución: Si deseas contribuir a este proyecto, haz un fork del repositorio, crea una nueva rama y envía tus cambios con un pull request.
+## Contribución: Si deseas contribuir a este proyecto, haz un fork del repositorio, crea una nueva rama y envía tus cambios con un pull request.
