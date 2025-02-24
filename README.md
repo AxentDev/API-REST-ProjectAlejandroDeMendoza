@@ -25,8 +25,7 @@ Este proyecto es una implementación de un sistema CRUD (Crear, Leer, Actualizar
    
 2. Mueve el proyecto a la carpeta htdocs de XAMPP:
 
-Coloca el proyecto dentro de la carpeta htdocs de tu instalación de XAMPP:
-C:\xampp\htdocs\"La ubicacion donde efectuaste la clonación del proyecto"
+- Coloca el proyecto dentro de la carpeta htdocs de tu instalación de XAMPP: C:\xampp\htdocs\"La ubicacion donde efectuaste la clonación del proyecto"
 
 * Ejemplo:
 C:\xampp\htdocs\api_backend_dev\API-REST\API.REST.PHP\api-rest
