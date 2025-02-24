@@ -64,5 +64,4 @@ API REST
 - PUT /update_client.php?id={id}: Actualiza un cliente existente.
 - DELETE /delete_client.php?id={id}: Elimina un cliente.
 
-Contribución
-Si deseas contribuir a este proyecto, haz un fork del repositorio, crea una nueva rama y envía tus cambios con un pull request.
+Contribución: Si deseas contribuir a este proyecto, haz un fork del repositorio, crea una nueva rama y envía tus cambios con un pull request.
