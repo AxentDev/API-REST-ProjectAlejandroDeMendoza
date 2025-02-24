@@ -1,4 +1,4 @@
-# Proyecto CRUD de Clientes
+# Proyecto CRUD De Clientes + Elaborado Por: Alejandro De Mendoza
 
 Este proyecto es una implementación de un sistema CRUD (Crear, Leer, Actualizar, Eliminar) de clientes utilizando PHP y MySQL, con una interfaz web sencilla en HTML y CSS. Los datos de los clientes son almacenados en una base de datos MySQL y pueden ser gestionados mediante una API REST.
 
