@@ -42,8 +42,10 @@ C:\xampp\htdocs\api_backend_dev\API-REST\API.REST.PHP\api-rest
 - Importa las tablas o la estructura necesarias en .sql.
   
 5. Accede al proyecto en el navegador:
-Abre tu navegador y accede a la dirección:
-http://localhost/"La ubicacion donde efectuaste la clonación del proyecto"/ProjectAlejandroDeMendoza
+- Abre tu navegador y accede a la dirección: http://localhost/"La ubicacion donde efectuaste la clonación del proyecto"/ProjectAlejandroDeMendoza
+- La imagen en tu navegador se muestra de la siguiente manera:
+
+
 
 * Ejemplo:
 http://localhost/api_backend_dev/API-REST/API.REST.PHP/api-rest/
