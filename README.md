@@ -45,7 +45,8 @@ C:\xampp\htdocs\api_backend_dev\API-REST\API.REST.PHP\api-rest
 - Abre tu navegador y accede a la dirección: http://localhost/"La ubicacion donde efectuaste la clonación del proyecto"/ProjectAlejandroDeMendoza
 - La imagen en tu navegador se muestra de la siguiente manera:
 
-
+![Imagen Web 1]([imagenes/mi-imagen.jpg](https://github.com/AxentDev/API-REST-ProjectAlejandroDeMendoza/blob/master/API-REST/API.REST.PHP/api-rest/ImagenWeb1.png))
+![Imagen Web 2]([imagenes/mi-imagen.jpg](https://github.com/AxentDev/API-REST-ProjectAlejandroDeMendoza/blob/master/API-REST/API.REST.PHP/api-rest/ImagenWeb2.png))
 
 * Ejemplo:
 http://localhost/api_backend_dev/API-REST/API.REST.PHP/api-rest/
